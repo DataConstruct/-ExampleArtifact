@@ -170,7 +170,17 @@ final kLastDay = DateTime(kToday.year, kToday.month + 3, kToday.day);
 
 
 
+/*
 
+
+This sets up static mock data.
+
+It is up to the developer to figure out how the data
+
+will be pulled for this page.
+
+
+*/
 
 
 
