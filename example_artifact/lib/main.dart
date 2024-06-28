@@ -1,3 +1,4 @@
+import 'package:example_artifact/pages/basic_todo_list.dart';
 import 'package:example_artifact/pages/basics_example.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -42,8 +42,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,10 +54,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             const SizedBox(height: 20.0),
             ElevatedButton(
-              child: Text('Basics'),
+              child: Text('Calendar'),
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => TableEventsExample()),
+              ),
+            ),
+            const SizedBox(height: 20.0),
+            ElevatedButton(
+              child: Text('Todo'),
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => TodoExample()),
               ),
             ),
           ],
@@ -68,4 +74,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-

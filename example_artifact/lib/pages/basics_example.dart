@@ -3,7 +3,6 @@ import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-
 class TableEventsExample extends StatefulWidget {
   @override
   _TableEventsExampleState createState() => _TableEventsExampleState();
@@ -149,8 +148,6 @@ class _TableEventsExampleState extends State<TableEventsExample> {
   }
 }
 
-
-
 /// Example event class.
 class Event {
   final String title;
@@ -165,11 +162,6 @@ final kToday = DateTime.now();
 final kFirstDay = DateTime(kToday.year, kToday.month - 3, kToday.day);
 final kLastDay = DateTime(kToday.year, kToday.month + 3, kToday.day);
 
-
-
-
-
-
 /*
 
 
@@ -182,17 +174,10 @@ will be pulled for this page.
 
 */
 
-
-
-
-
-
-
 final kEvents = LinkedHashMap<DateTime, List<Event>>(
   equals: isSameDay,
   hashCode: getHashCode,
 )..addAll(_kEventSource);
-
 
 final _kEventSource = Map.fromIterable(List.generate(50, (index) => index),
     key: (item) => DateTime.utc(kFirstDay.year, kFirstDay.month, item * 5),
